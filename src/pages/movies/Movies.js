@@ -9,9 +9,11 @@ export function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    const searchQuery = searchParams.get('query') ?? '';
-    const url = `https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=false&language=en-US&page=1`;
-    fetchMovies(url)
+    const searchInputValue = searchParams.get('inputValue') ?? '';
+
+    fetchMovies(
+      `https://api.themoviedb.org/3/search/movie?query=${searchInputValue}&include_adult=false&language=en-US&page=1`
+    )
       .then(results => {
         setMovies(results);
       })
