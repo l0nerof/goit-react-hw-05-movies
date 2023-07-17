@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, useSearchParams } from 'react-router-dom';
 import { fetchMovies } from 'Api/FetchMovies';
 
-export function Movies() {
+export default function Movies() {
   const [movies, setMovies] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -27,7 +27,7 @@ export function Movies() {
         <ul>
           {movies.results.map(result => {
             return (
-              <li key={result.id} className={css.MovieItem}>
+              <li key={result.id}>
                 <NavLink to={`${result.id}`} className={css.MovieLink}>
                   <p>{result.original_title}</p>
                 </NavLink>

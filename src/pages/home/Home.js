@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { fetchMovies } from 'Api/FetchMovies';
 import { HomeTrending } from 'components/homeTrending/HomeTrending';
 
-export function Home() {
+export default function Home() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {

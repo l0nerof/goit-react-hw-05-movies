@@ -9,7 +9,7 @@ import {
 import { fetchMovies } from 'Api/FetchMovies';
 import css from './MovieDetails.module.css';
 
-export function MovieDetails() {
+export default function MovieDetails() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState('');
 
@@ -46,8 +46,8 @@ export function MovieDetails() {
             <p>{movie.overview}</p>
             <h3>Genres</h3>
             <div>
-              {movie.genres.map(genr => {
-                return <p key={genr.id}>{genr.name}</p>;
+              {movie.genres.map(genre => {
+                return <p key={genre.id}>{genre.name}</p>;
               })}
             </div>
           </div>

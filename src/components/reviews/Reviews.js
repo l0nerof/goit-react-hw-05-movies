@@ -1,9 +1,8 @@
-// import css from './Reviews.module.css';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovies } from 'Api/FetchMovies';
 
-export function Reviews() {
+export default function Reviews() {
   const { movieId } = useParams();
   const [Reviews, setReviews] = useState('');
 

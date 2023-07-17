@@ -1,18 +1,16 @@
 .MovieDetailsContainer {
   padding: 20px;
-  padding-bottom: 100px;
 }
 
 .MovieDetailsLink {
   display: inline-block;
-  color: black;
   font-size: 14px;
   text-decoration: none;
-  background: white;
   border: 1px solid black;
   border-radius: 9px;
   padding: 2px 4px;
   margin-bottom: 20px;
+  cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -24,7 +22,6 @@
 
 .MovieDetailsNavLink {
   color: black;
-  margin: 0;
   text-decoration: none;
   font-size: 14px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
