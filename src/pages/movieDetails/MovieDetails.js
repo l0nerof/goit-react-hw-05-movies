@@ -24,7 +24,7 @@ export default function MovieDetails() {
   }, [url]);
 
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/';
+  const backLinkHref = location.state?.from ?? '/movies';
 
   return (
     movie && (
