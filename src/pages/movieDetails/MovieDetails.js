@@ -1,4 +1,4 @@
-import { Suspense, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Link,
   NavLink,
@@ -65,9 +65,9 @@ export default function MovieDetails() {
             </NavLink>
           </li>
         </ul>
-        <Suspense fallback={<div>Loading page...</div>}>
-          <Outlet />
-        </Suspense>
+        {/* <Suspense fallback={<div>Loading page...</div>}> */}
+        <Outlet />
+        {/* </Suspense> */}
       </div>
     )
   );
