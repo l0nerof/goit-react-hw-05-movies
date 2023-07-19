@@ -24,7 +24,7 @@ export default function MovieDetails() {
   }, [url]);
 
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/movies';
+  const backLinkHref = location.state?.from ?? '/';
 
   return (
     movie && (
@@ -65,9 +65,7 @@ export default function MovieDetails() {
             </NavLink>
           </li>
         </ul>
-        {/* <Suspense fallback={<div>Loading page...</div>}> */}
         <Outlet />
-        {/* </Suspense> */}
       </div>
     )
   );
